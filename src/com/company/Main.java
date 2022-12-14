@@ -8,10 +8,13 @@ public class Main {
 
     static int n, k;
     static int[] a;
-    static int arr[] = {1, 2, 3, 4};
+    static int arr_size = 4; // -1
+    static int[] arr = new int[arr_size+1];
 
     public static void main(String[] args) {
-
+            for (int i = 0, j = 1; i <=arr_size; i++, j++){
+                arr[i] = j;
+            }
 //        GeneratorWorker w = new GeneratorWorker(1,  4, 3);
 //        GeneratorWorker r = new GeneratorWorker(2,  4, 3);
 //        GeneratorWorker a = new GeneratorWorker(3, 4, 3);
@@ -30,7 +33,7 @@ public class Main {
 
         System.out.println("1 thread: ");
 
-        int n = arr.length;
+        int n = arr_size;
         int r = 4;
         start = new Date();
         CombinationRepetition(arr, n, r);
